@@ -1,0 +1,251 @@
+object frmRegisterBase: TfrmRegisterBase
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  ClientHeight = 561
+  ClientWidth = 784
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  OnShow = FormShow
+  TextHeight = 15
+  object cpContainer: TCardPanel
+    Left = 0
+    Top = 0
+    Width = 784
+    Height = 561
+    Align = alClient
+    ActiveCard = crdSearch
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitWidth = 780
+    ExplicitHeight = 560
+    object crdRegister: TCard
+      Left = 0
+      Top = 0
+      Width = 784
+      Height = 561
+      Caption = 'crdRegister'
+      CardIndex = 0
+      TabOrder = 0
+      object p3_RFooter: TPanel
+        Left = 0
+        Top = 526
+        Width = 784
+        Height = 35
+        Align = alBottom
+        TabOrder = 0
+        object pnlAux: TPanel
+          Left = 593
+          Top = 1
+          Width = 190
+          Height = 33
+          Align = alRight
+          BevelOuter = bvNone
+          TabOrder = 0
+          object btnCancel: TButton
+            Left = 105
+            Top = 4
+            Width = 80
+            Height = 25
+            Caption = 'Cancelar'
+            ImageAlignment = iaRight
+            ImageIndex = 5
+            Images = dmIcons.imgLicons24x
+            TabOrder = 1
+            OnClick = btnCancelClick
+          end
+          object btnSave: TButton
+            Left = 20
+            Top = 4
+            Width = 80
+            Height = 25
+            Caption = 'Salvar'
+            ImageAlignment = iaRight
+            ImageIndex = 3
+            Images = dmIcons.imgLicons24x
+            TabOrder = 0
+            OnClick = btnSaveClick
+          end
+        end
+      end
+    end
+    object crdSearch: TCard
+      Left = 0
+      Top = 0
+      Width = 784
+      Height = 561
+      Caption = 'crdSearch'
+      CardIndex = 1
+      TabOrder = 1
+      ExplicitWidth = 780
+      ExplicitHeight = 560
+      object p1_SHeader: TPanel
+        Left = 0
+        Top = 0
+        Width = 784
+        Height = 34
+        Align = alTop
+        BevelOuter = bvNone
+        TabOrder = 0
+        ExplicitWidth = 780
+        object pnlSearch: TPanel
+          Left = 121
+          Top = 0
+          Width = 663
+          Height = 34
+          Align = alRight
+          BevelOuter = bvNone
+          Padding.Top = 5
+          Padding.Right = 5
+          Padding.Bottom = 5
+          TabOrder = 0
+          ExplicitLeft = 117
+          object btnSearch: TButton
+            Left = 634
+            Top = 5
+            Width = 24
+            Height = 24
+            Cursor = crHandPoint
+            Hint = 'Pesquisar'
+            Align = alRight
+            ImageAlignment = iaCenter
+            ImageIndex = 9
+            Images = dmIcons.imgLicons24x
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 1
+          end
+          object edtSearch: TEdit
+            Left = 321
+            Top = 5
+            Width = 313
+            Height = 24
+            Align = alRight
+            TabOrder = 0
+            ExplicitHeight = 23
+          end
+        end
+        object pnlButtons: TPanel
+          Left = 0
+          Top = 0
+          Width = 121
+          Height = 34
+          Align = alClient
+          BevelOuter = bvNone
+          TabOrder = 1
+          ExplicitWidth = 117
+          object btnAdd: TButton
+            Left = 5
+            Top = 4
+            Width = 24
+            Height = 24
+            Cursor = crHandPoint
+            Hint = 'Novo'
+            ImageAlignment = iaCenter
+            ImageIndex = 0
+            Images = dmIcons.imgLicons24x
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 0
+            OnClick = btnAddClick
+          end
+          object btnEdit: TButton
+            Left = 35
+            Top = 4
+            Width = 24
+            Height = 24
+            Cursor = crHandPoint
+            Hint = 'Editar'
+            ImageAlignment = iaCenter
+            ImageIndex = 2
+            Images = dmIcons.imgLicons24x
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 1
+            OnClick = btnEditClick
+          end
+          object btnDelete: TButton
+            Left = 65
+            Top = 4
+            Width = 24
+            Height = 24
+            Cursor = crHandPoint
+            Hint = 'Excluir'
+            ImageAlignment = iaCenter
+            ImageIndex = 1
+            Images = dmIcons.imgLicons24x
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 2
+            OnClick = btnDeleteClick
+          end
+          object btnPrint: TButton
+            Left = 95
+            Top = 4
+            Width = 24
+            Height = 24
+            Cursor = crHandPoint
+            Hint = 'Relat'#243'rio'
+            ImageAlignment = iaCenter
+            ImageIndex = 8
+            Images = dmIcons.imgLicons24x
+            ParentShowHint = False
+            ShowHint = True
+            TabOrder = 3
+          end
+        end
+      end
+      object p2_SBody: TPanel
+        Left = 0
+        Top = 34
+        Width = 784
+        Height = 492
+        Align = alClient
+        BevelOuter = bvNone
+        TabOrder = 1
+        ExplicitWidth = 780
+        ExplicitHeight = 491
+        object DBGridBase: TDBGrid
+          Left = 0
+          Top = 0
+          Width = 784
+          Height = 492
+          Align = alClient
+          BorderStyle = bsNone
+          PopupMenu = PopupMenuBase
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -12
+          TitleFont.Name = 'Segoe UI'
+          TitleFont.Style = []
+        end
+      end
+      object p3_SFooter: TPanel
+        Left = 0
+        Top = 526
+        Width = 784
+        Height = 35
+        Align = alBottom
+        BevelOuter = bvNone
+        TabOrder = 2
+        ExplicitTop = 525
+        ExplicitWidth = 780
+      end
+    end
+  end
+  object DataSourceBase: TDataSource
+    Left = 726
+    Top = 510
+  end
+  object PopupMenuBase: TPopupMenu
+    Left = 630
+    Top = 510
+  end
+end
